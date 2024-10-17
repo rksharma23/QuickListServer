@@ -8,13 +8,13 @@ const createTodo = asyncHandler(async function(req, res, next){
     const userId = req.user._id
     
     if(!userId){
-        console.log("No userId found after JWT verification !!!");
+        // console.log("No userId found after JWT verification !!!");
         throw new ApiError(501, "Internal Server Error")
     }
 
     const user = await User.findById(userId);
     if(!user){
-        console.log("User not Found while creation of todo");
+        // console.log("User not Found while creation of todo");
         throw new ApiError(501, "Internal server Error")
     }
 
@@ -211,8 +211,8 @@ const deleteTodo = asyncHandler(async function(req, res, next){
     const userID = req.user._id
 
     if(!todoID || !userID){
-        console.log(todoID)
-        console.log(userID);
+        // console.log(todoID)
+        // console.log(userID);
         throw new ApiError(501, "Internal Server Error, please try again later!!!")
     }
 
