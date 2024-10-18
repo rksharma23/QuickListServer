@@ -11,7 +11,7 @@ const app = express()
 app.use(cookieParser());
 
 app.use(cors({
-    origin: 'https://quicklistclient.vercel.app/',
+    origin: 'https://quicklistclient.vercel.app',
     credentials: true
 }))     //THIS IS TO ALLOW THE CROSS ORIGIN ACCESS AND COMES UNDER THE CORS POLICY
 
